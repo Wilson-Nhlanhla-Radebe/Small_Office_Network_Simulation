@@ -1,0 +1,13 @@
+flowchart TB
+    WAN[Cloud-PT / DSL WAN]
+    MODEM[DSL Modem]
+    OR[Office Router\n10.0.0.1 WAN\n192.168.1.1 LAN1\n192.168.2.1 VLAN1]
+    S1[Switch 1]
+    S2[Switch 2]
+    SERVER[DHCP / DNS Server\n192.168.1.2]
+    ISP[ISP Router\n10.0.0.2 / 10.0.0.5]
+    IR[Internet Router\n10.0.0.6 / 203.0.113.1]
+    EXT[External Test PC\n203.0.113.10]
+    OR --> MODEM --> WAN --> ISP --> IR --> EXT
+    OR --> S1 --> SERVER
+    OR --> S2
