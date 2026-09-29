@@ -1,0 +1,28 @@
+# Evidence Checklist
+
+Capture screenshots from the final saved Packet Tracer topology. Do not claim evidence for anything not verified.
+
+| # | Filename | Evidence |
+|---|---|---|
+| 01 | 01-final-topology.png | Complete final topology |
+| 02 | 02-office-router-interfaces.png | show ip interface brief |
+| 03 | 03-dhcp-relay-vlan1.png | Vlan1 IP + ip helper-address |
+| 04 | 04-lan2-dhcp-client.png | LAN 2 workstation DHCP details |
+| 05 | 05-office-routing-table.png | Office Router routing table |
+| 06 | 06-isp-routing-table.png | ISP routing table |
+| 07 | 07-upstream-routing-table.png | Internet Router routing table |
+| 08 | 08-connectivity-tests.png | Representative successful pings |
+| 09 | 09-nat-translations.png | show ip nat translations |
+| 10 | 10-dns-service-and-test.png | DNS record + client DNS + hostname test |
+| 11 | 11-packet-tracer-file.png | Final artifact verification if desired |
+
+## Screenshot quality
+
+- Show enough UI to identify the device/context.
+- Keep the relevant command or configuration visible.
+- Avoid usernames, tokens, passwords, private keys, or unrelated desktop content.
+- Use the final saved topology, not an earlier intermediate version.
+
+## Evidence-to-claim rule
+
+Every README claim about tested behavior should be backed by a command screenshot, client configuration screenshot, final .pkt artifact, or a reproducible documented test.
