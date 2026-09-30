@@ -62,7 +62,7 @@ A verified translation showed an internal client such as 192.168.2.2 translated 
 - The external test PC became reachable after correcting its default gateway.
 - LAN 2 client reached 203.0.113.10 after PAT was configured.
 - show ip nat translations confirmed private-to-WAN translation.
-- DNS was tested separately from raw IP connectivity.
+- DNS name resolution was verified after configuring the DNS record and distributing the DNS server through DHCP.
 
 ## Troubleshooting lessons
 
@@ -84,13 +84,17 @@ A successful ping to an IP address does not prove hostname resolution. DNS was i
 
 ## Evidence
 
-See evidence/EVIDENCE-CHECKLIST.md, evidence/VERIFICATION-MATRIX.md, and evidence/COMMAND-EVIDENCE.md. Add the final .pkt file and numbered screenshots from the final saved topology.
+See evidence/EVIDENCE-CHECKLIST.md, evidence/VERIFICATION-MATRIX.md, and evidence/COMMAND-EVIDENCE.md. The lab is functionally complete; the remaining portfolio work is to capture the numbered screenshots and upload the final .pkt artifact from the saved Packet Tracer topology.
 
 > 203.0.113.0/24 is a simulated external/test network for Packet Tracer. It demonstrates Internet-style routing and NAT behavior inside the lab; it is not a claim of real Internet access.
 
 ## Portfolio wording
 
 Designed and implemented a Cisco Packet Tracer small-office network simulation with segmented LANs, centralized DHCP, DHCP relay, IPv4 routing, a DSL-style WAN and ISP path, default and return routing, NAT/PAT, DNS fundamentals, and structured end-to-end verification and troubleshooting.
+
+## Final validation
+
+The completed lab was tested end-to-end: DHCP on both LANs, DHCP relay, inter-LAN routing, WAN reachability, default and return routes, PAT/NAT translation, and DNS name resolution.
 
 ## Repository structure
 
