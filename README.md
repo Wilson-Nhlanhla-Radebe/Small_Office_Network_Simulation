@@ -4,13 +4,13 @@ A portfolio project demonstrating the design, configuration, verification, and t
 
 ## Project objective
 
-Build a realistic small-office environment with two internal LANs, a centralized DHCP/DNS server, DHCP relay, routing, a DSL-style WAN, ISP routing, NAT/PAT, and an external test network.
+The lab represents a small office with two internal LANs, a centralized DHCP/DNS server, DHCP relay, IPv4 routing, a DSL-style WAN, ISP routing, NAT/PAT, and an external test network.
 
 ## Topology
 
-Office LAN 1 (192.168.1.0/24) → Switch 1 → Office Router
-Office LAN 2 (192.168.2.0/24) → Switch 2 → Office Router
-DHCP/DNS Server (192.168.1.2) → Switch 1
+Office LAN 1 (192.168.1.0/24) → Switch 1 → Office Router  
+Office LAN 2 (192.168.2.0/24) → Switch 2 → Office Router  
+DHCP/DNS Server (192.168.1.2) → Switch 1  
 Office Router → DSL Modem → Cloud-PT → ISP Router → Internet Router → External Test PC
 
 ## Addressing plan
@@ -41,7 +41,7 @@ Office Router → DSL Modem → Cloud-PT → ISP Router → Internet Router → 
 
 ## DHCP relay
 
-The DHCP server is on 192.168.1.0/24 while LAN 2 clients are on 192.168.2.0/24. The Office Router relays DHCP requests on Vlan1 to 192.168.1.2. This allows one DHCP server to service multiple subnets.
+The DHCP server is on 192.168.1.0/24 while LAN 2 clients are on 192.168.2.0/24. The Office Router relays DHCP requests on Vlan1 to 192.168.1.2, allowing one DHCP server to service both subnets.
 
 ## Routing
 
@@ -49,20 +49,15 @@ The Office Router has connected routes for both LANs and a default route toward 
 
 ## NAT/PAT
 
-The LAN-facing interfaces are NAT inside and the WAN interface is NAT outside. ACLs match both private office networks, and NAT overload allows multiple internal clients to share the Office Router WAN-side address.
+The LAN-facing interfaces are configured as NAT inside and the WAN interface as NAT outside. ACLs match both private office networks, and NAT overload allows multiple internal clients to share the Office Router WAN-side address.
 
 A verified translation showed an internal client such as 192.168.2.2 translated to 10.0.0.1 while reaching 203.0.113.10.
 
-## Verification performed
+## Verification
 
-- LAN 2 workstation received a 192.168.2.x DHCP address.
-- LAN 2 workstation reached LAN 1 hosts.
-- Office Router ↔ ISP Router ping succeeded with 0% loss.
-- ISP Router ↔ upstream Router ping succeeded.
-- The external test PC became reachable after correcting its default gateway.
-- LAN 2 client reached 203.0.113.10 after PAT was configured.
-- show ip nat translations confirmed private-to-WAN translation.
-- DNS name resolution was verified after configuring the DNS record and distributing the DNS server through DHCP.
+The completed lab was verified across both LANs, the WAN path, NAT/PAT, and DNS. Tests included DHCP assignment on LAN 2, inter-LAN reachability, router-to-router connectivity, external host reachability, NAT translation, and DNS name resolution.
+
+The external test PC initially had an incorrect default gateway; correcting it restored end-to-end connectivity. This provided a useful return-routing troubleshooting case.
 
 ## Troubleshooting lessons
 
@@ -80,7 +75,7 @@ Routing decides where packets go. NAT/PAT changes the source identity used by pr
 
 ### DNS versus connectivity
 
-A successful ping to an IP address does not prove hostname resolution. DNS was intentionally tested as a separate service.
+A successful ping to an IP address does not prove hostname resolution. DNS was tested separately from raw IP connectivity.
 
 ## Evidence Gallery
 
@@ -108,19 +103,11 @@ A successful ping to an IP address does not prove hostname resolution. DNS was i
 
 For the complete evidence set, see the [evidence directory](evidence/) and the [evidence checklist](evidence/EVIDENCE-CHECKLIST.md).
 
-## Evidence
-
-See evidence/EVIDENCE-CHECKLIST.md, evidence/VERIFICATION-MATRIX.md, and evidence/COMMAND-EVIDENCE.md. The lab is functionally complete; the remaining portfolio work is to capture the numbered screenshots and upload the final .pkt artifact from the saved Packet Tracer topology.
-
 > 203.0.113.0/24 is a simulated external/test network for Packet Tracer. It demonstrates Internet-style routing and NAT behavior inside the lab; it is not a claim of real Internet access.
 
 ## Portfolio wording
 
 Designed and implemented a Cisco Packet Tracer small-office network simulation with segmented LANs, centralized DHCP, DHCP relay, IPv4 routing, a DSL-style WAN and ISP path, default and return routing, NAT/PAT, DNS fundamentals, and structured end-to-end verification and troubleshooting.
-
-## Final validation
-
-The completed lab was tested end-to-end: DHCP on both LANs, DHCP relay, inter-LAN routing, WAN reachability, default and return routes, PAT/NAT translation, and DNS name resolution.
 
 ## Repository structure
 
