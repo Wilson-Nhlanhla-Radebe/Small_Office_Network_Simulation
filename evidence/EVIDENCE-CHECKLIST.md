@@ -14,15 +14,4 @@ Capture screenshots from the final saved Packet Tracer topology. Do not claim ev
 | 08 | 08-connectivity-tests.png | Representative successful pings |
 | 09 | 09-nat-translations.png | show ip nat translations |
 | 10 | 10-dns-service-and-test.png | DNS record + client DNS + hostname test |
-| 11 | 11-packet-tracer-file.png | Final artifact verification if desired |
-
-## Screenshot quality
-
-- Show enough UI to identify the device/context.
-- Keep the relevant command or configuration visible.
-- Avoid usernames, tokens, passwords, private keys, or unrelated desktop content.
-- Use the final saved topology, not an earlier intermediate version.
-
-## Evidence-to-claim rule
-
-Every README claim about tested behavior should be backed by a command screenshot, client configuration screenshot, final .pkt artifact, or a reproducible documented test.
+| 11 | 11-packet-tracer-file.png | Final artifact verification |
