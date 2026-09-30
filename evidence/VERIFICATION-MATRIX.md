@@ -1,6 +1,6 @@
 # Verification Matrix
 
-| Area | Result from lab build | Evidence to publish |
+| Area | Result from lab build | Evidence |
 |---|---|---|
 | LAN 1 addressing | Verified | Router interface |
 | LAN 2 addressing | Verified | Vlan1 + client |
@@ -17,5 +17,5 @@
 | NAT inside/outside | Verified | Office Router config |
 | PAT translation | Verified | show ip nat translations |
 | LAN 2 → external test host | Verified after PAT | Ping + NAT table |
-| DNS | Tested separately | DNS service + client test |
+| DNS | Verified | DNS service + client test |
 | Final .pkt | Saved and Verified | packet-tracer/ |
