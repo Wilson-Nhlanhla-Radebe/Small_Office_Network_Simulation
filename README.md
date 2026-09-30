@@ -82,6 +82,32 @@ Routing decides where packets go. NAT/PAT changes the source identity used by pr
 
 A successful ping to an IP address does not prove hostname resolution. DNS was intentionally tested as a separate service.
 
+## Evidence Gallery
+
+### Final topology
+
+![Final topology](screenshots/01-final-topology.png)
+
+### DHCP relay
+
+![DHCP relay configuration](screenshots/03-dhcp-relay-vlan1.png)
+
+### LAN 2 DHCP client
+
+![LAN 2 DHCP client](screenshots/04-lan2-dhcp-client.png)
+
+### NAT/PAT verification
+
+![NAT translations](screenshots/09-nat-translations.png)
+
+### DNS verification
+
+![DNS record](screenshots/10a-dns-record.png)
+
+![DNS test](screenshots/10b-dns-test.png)
+
+For the complete evidence set, see the [evidence directory](evidence/) and the [evidence checklist](evidence/EVIDENCE-CHECKLIST.md).
+
 ## Evidence
 
 See evidence/EVIDENCE-CHECKLIST.md, evidence/VERIFICATION-MATRIX.md, and evidence/COMMAND-EVIDENCE.md. The lab is functionally complete; the remaining portfolio work is to capture the numbered screenshots and upload the final .pkt artifact from the saved Packet Tracer topology.
