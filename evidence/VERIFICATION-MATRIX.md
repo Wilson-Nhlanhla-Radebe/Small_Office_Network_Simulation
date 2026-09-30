@@ -18,4 +18,4 @@
 | PAT translation | Verified | show ip nat translations |
 | LAN 2 → external test host | Verified after PAT | Ping + NAT table |
 | DNS | Tested separately | DNS service + client test |
-| Final .pkt | Pending final save/upload | packet-tracer/ |
+| Final .pkt | Saved and Verified | packet-tracer/ |
