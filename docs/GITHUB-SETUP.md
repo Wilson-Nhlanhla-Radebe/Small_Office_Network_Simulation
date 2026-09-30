@@ -1,21 +1,19 @@
-# GitHub Setup
+# GitHub Repository
 
 Repository: Wilson-Nhlanhla-Radebe/Small_Office_Network_Simulation
 
-Recommended description:
+## Repository description
 
-> Portfolio lab: small-office network with centralized DHCP, DHCP relay, routing, WAN/ISP simulation, NAT/PAT, and DNS using Cisco Packet Tracer.
+Portfolio lab: small-office network with centralized DHCP, DHCP relay, routing, WAN/ISP simulation, NAT/PAT, and DNS using Cisco Packet Tracer.
 
-## Final artifact
+## Project artifacts
 
-Save the final Packet Tracer topology as:
+Packet Tracer topology:
 
     packet-tracer/small-office-network-lab.pkt
 
-Add final evidence screenshots under:
+Evidence screenshots:
 
     screenshots/
 
-## Portfolio hygiene
-
-Do not publish passwords, tokens, private keys, or real company credentials in screenshots or configuration files.
+The repository contains the Packet Tracer topology, configuration reference, architecture documentation, evidence, verification records, and portfolio description.
