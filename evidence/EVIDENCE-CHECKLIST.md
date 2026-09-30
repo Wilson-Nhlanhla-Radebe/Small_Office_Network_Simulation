@@ -1,6 +1,6 @@
 # Evidence Checklist
 
-Capture screenshots from the final saved Packet Tracer topology. Do not claim evidence for anything not verified.
+The evidence set corresponds to the saved Packet Tracer topology and records the configuration and verification points represented in the project.
 
 | # | Filename | Evidence |
 |---|---|---|
