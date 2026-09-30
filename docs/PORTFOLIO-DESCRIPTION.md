@@ -32,7 +32,7 @@ A centralized DHCP server served both subnets. The router relayed requests from 
 
 ### Routing
 
-The office router needed a default route toward the ISP, while upstream routers needed return paths back toward the office networks.
+The office router used a default route toward the ISP, while upstream routers used return paths back toward the office networks.
 
 ### NAT/PAT
 
@@ -41,7 +41,3 @@ Private client traffic was translated to the office WAN address so multiple host
 ### Troubleshooting
 
 The build included troubleshooting a wrong external default gateway and separating IP reachability from DNS name resolution.
-
-## Evidence standard
-
-Present the project as: **Design → Configuration → Verification → Troubleshooting → Result**.
