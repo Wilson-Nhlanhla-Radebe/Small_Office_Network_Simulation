@@ -48,4 +48,4 @@ Verified during the build: LAN 2 → LAN 1 hosts; Office Router ↔ ISP Router; 
 
 ## DNS status
 
-DNS was tested separately from raw IP connectivity. Final DNS screenshots should be added after the DNS record and DHCP-distributed DNS setting are confirmed in the final .pkt.
+DNS was tested separately from raw IP connectivity. The final configuration includes a DNS record for example.com mapped to 203.0.113.10 and distributes 192.168.1.2 as the DNS server through DHCP.
